@@ -5,7 +5,18 @@
 // 1 -3,3 8 -9,9
 // 8 7,8 -7,1 9
 
-double[,] matr = new double[3, 4];
+int Prompt(string message)
+{
+    System.Console.WriteLine(message);
+    int value = Convert.ToInt32(Console.ReadLine());
+    return value;
+}
+
+int line = Prompt("Введите количество строк матрицы   ");
+int column = Prompt("Введите количество столбцов матрицы   ");
+System.Console.WriteLine();
+
+double[,] matr = new double[line, column];
 
 void Fillcoll(double[,] mat,int minValue, int maxValue)
 {
